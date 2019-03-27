@@ -7,6 +7,7 @@
     "start": "supervisor app.js"
   },
   "dependencies": {
+    "glob": "^7.1.3",
     "jwt-simple": "^0.5.5",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",

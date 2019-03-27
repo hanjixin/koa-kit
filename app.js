@@ -5,8 +5,8 @@ const koaJwt = require('koa-jwt') //路由权限控制
 const port = require('./config').port;
 const WhiteList = ['/login', '/register'];
 const BodyParser = require('koa-bodyparser');
-var koaJsonLogger = require('koa-json-logger');
-
+const koaJsonLogger = require('koa-json-logger');
+require('./dataBase')
 
 app.use(async (ctx, next) => {
   console.log(ctx.URL.pathname, ctx.state)
