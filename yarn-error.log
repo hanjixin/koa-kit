@@ -1,0 +1,32 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\maxrocky\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add koa2 --save
+
+PATH: 
+  C:\Users\maxrocky\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\maxrocky\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Boxstarter;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Users\maxrocky\AppData\Local\Microsoft\WindowsApps;C:\Users\maxrocky\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\maxrocky\AppData\Roaming\npm;C:\Users\maxrocky\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Egret\Egret Wing 3\bin;C:\Users\maxrocky\AppData\Local\Programs\Python\Python37;C:\Users\maxrocky\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\maxrocky\AppData\Local\Programs\Fiddler;D:\flutterJDK\flutter\bin;C:\Program Files\Docker Toolbox;D:\ffmpeg-20190217-a9452fe-win64-static\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  10.12.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect ETIMEDOUT 104.16.27.35:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+
+npm manifest: 
+  {
+    "name": "koa-test",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

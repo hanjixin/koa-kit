@@ -1,0 +1,19 @@
+{
+  "name": "koa-kit",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "supervisor app.js"
+  },
+  "dependencies": {
+    "jwt-simple": "^0.5.5",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-json-logger": "^1.0.2",
+    "koa-jwt": "^3.5.1",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.4.20",
+    "supervisor": "^0.12.0"
+  }
+}
