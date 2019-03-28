@@ -33,9 +33,11 @@ router.get('/login',(ctx, next) => {
     }
   // ctx.body = '认证'
 })
-router.post('/login',(ctx, next) => {
+router.get('/userinfo',(ctx, next) => {
   
-  ctx.body = '认证'
+  ctx.body = {
+    data: ctx.state
+  }
 })
 
 module.exports = router;

@@ -6,6 +6,9 @@ const userSchema = new Schema({
     UserId:ObjectId,
     userName:{unique:true,type:String},
     password:String,
+    sex: String,
+    age: String,
+    avator: String,
     createAt:{type:Date,default:Date.now()},
     lastLoginAt:{type:Date,default:Date.now()}
 })

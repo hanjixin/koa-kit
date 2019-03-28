@@ -6,6 +6,7 @@ const port = require('./config').port;
 const WhiteList = ['/login', '/register'];
 const BodyParser = require('koa-bodyparser');
 const koaJsonLogger = require('koa-json-logger');
+var cors = require('koa2-cors');
 require('./dataBase')
 
 app.use(async (ctx, next) => {
@@ -24,9 +25,12 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
   // ctx.body = 'hello111'
 })
-app.use(koaJwt({secret:'jwtSecret'}).unless({
+app.use(koaJwt({secret:'jwtSecret', getToken(ctx) {
+  return ctx.header.token
+}}).unless({
   path:[/^\/login/]
 }))
+app.use(cors())
 app.use(koaJsonLogger());
 app.use(BodyParser())
 app.use(router.routes())
