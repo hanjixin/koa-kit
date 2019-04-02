@@ -2,9 +2,12 @@ const Koa = require('koa');
 const app = new Koa();
 const router = require('./router/index');
 const koaJwt = require('koa-jwt') //路由权限控制
+const static = require('koa-static');
 const port = require('./config').port;
 const WhiteList = ['/login', '/register'];
 const BodyParser = require('koa-bodyparser');
+const koaBody = require('koa-body');
+
 const koaJsonLogger = require('koa-json-logger');
 var cors = require('koa2-cors');
 require('./dataBase')
@@ -31,10 +34,18 @@ app.use(koaJwt({secret:'jwtSecret', getToken(ctx) {
   path:[/^\/login/]
 }))
 app.use(cors())
+
 app.use(koaJsonLogger());
-app.use(BodyParser())
+app.use(koaBody({
+  multipart: true,
+  formidable: {
+      maxFileSize: 2000*1024*1024    // 设置上传文件大小最大限制，默认2M
+  }
+}));
 app.use(router.routes())
 app.use(router.allowedMethods())
+app.use(static(__dirname+'/public'));
+
 app.listen(port, () => {
   console.log('server is listen port ' + port)
 })
