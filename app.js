@@ -31,7 +31,7 @@ app.use(async (ctx, next) => {
 app.use(koaJwt({secret:'jwtSecret', getToken(ctx) {
   return ctx.header.token
 }}).unless({
-  path:[/^\/login/]
+  path:[/^\/login/, /^\/wechat/]
 }))
 app.use(cors())
 
