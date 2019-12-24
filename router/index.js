@@ -5,7 +5,7 @@ const path = require('path')
 const tokenExpiresTime = require('../config').tokenExpiresTime;
 const jwt = require('jwt-simple')
 const wechat = require('../controller/wechat.js')
-router.use('/wechat', wechat.routes(), wechat.allowedMethods())
+router.use('/wechat',wechat.routes(), wechat.allowedMethods())
 router.get('/',(ctx, next) => {
 
   ctx.body = '我是根路由'
