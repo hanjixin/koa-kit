@@ -4,6 +4,8 @@ const fs = require('fs')
 const path = require('path')
 const tokenExpiresTime = require('../config').tokenExpiresTime;
 const jwt = require('jwt-simple')
+const wechat = require('../controller/wechat.js')
+router.use('/wechat', wechat.routes(), wechat.allowedMethods())
 router.get('/',(ctx, next) => {
 
   ctx.body = '我是根路由'
@@ -43,7 +45,6 @@ router.get('/userinfo',(ctx, next) => {
 })
 router.post('/uploadfile', async (ctx, next) => {
   // 上传单个文件
-  
   const file = ctx.request.files.file; // 获取上传文件
   // 创建可读流
   console.log(ctx.request.files)

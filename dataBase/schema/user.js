@@ -1,19 +1,23 @@
-const mongoose = require('mongoose')    //引入Mongoose
-const Schema = mongoose.Schema          //声明Schema
-let ObjectId = Schema.Types.ObjectId    //声明Object类型
+const mongoose = require('mongoose'); //引入Mongoose
+const Schema = mongoose.Schema; //声明Schema
+let ObjectId = Schema.Types.ObjectId; //声明Object类型
 //创建我们的用户Schema
 const userSchema = new Schema({
-    UserId:ObjectId,
-    userName:{unique:true,type:String},
-    password:String,
-    sex: String,
-    age: String,
-    avator: String,
-    createAt:{type:Date,default:Date.now()},
-    lastLoginAt:{type:Date,default:Date.now()}
-})
+  UserId: ObjectId,
+  userName: { unique: true, type: String },
+  password: String,
+  sex: String,
+  age: String,
+  avator: String,
+  refresh_token: String,
+  access_token: String,
+  openid: String,
+  unionid: String,
+  createAt: { type: Date, default: Date.now() },
+  lastLoginAt: { type: Date, default: Date.now() }
+});
 //发布模型
-mongoose.model('User',userSchema)
+module.exports = mongoose.model('User', userSchema);
 // String ：字符串类型
 // Number ：数字类型
 // Date ： 日期类型

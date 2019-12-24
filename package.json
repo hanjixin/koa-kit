@@ -22,6 +22,7 @@
     "moment": "^2.24.0",
     "mongoose": "^5.4.20",
     "path-to-regexp": "^3.0.0",
+    "request": "^2.88.0",
     "supervisor": "^0.12.0"
   }
 }
