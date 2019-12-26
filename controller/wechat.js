@@ -24,9 +24,9 @@ router.get('/getCode', async (ctx, next) => {
     if(!result.openid) {
       throw result
     } else {
-      let resultJson = await new Promise(function(resolve, reject) {
+      let resultJson2 = await new Promise(function(resolve, reject) {
         request.get(
-          `https://api.weixin.qq.com/cgi-bin/user/info?access_token=${result.access_token}&openid=${result.openid}&lang=zh_CN
+          `https://api.weixin.qq.com/sns/userinfo?access_token=${result.access_token}&openid=${result.openid}&lang=zh_CN
 
           `,
           async (err, res) => {
@@ -37,8 +37,11 @@ router.get('/getCode', async (ctx, next) => {
           }
         );
       });
-      const UserInfo = JSON.parse(resultJson)
-      console.log(UserInfo)
+      const UserInfo = JSON.parse(resultJson2)
+      console.log(UserInfo, result)
+      if(UserInfo.errcode) {
+        throw UserInfo
+      }
       var user = new User({
         openid: UserInfo.openid,
         unionid: '',
