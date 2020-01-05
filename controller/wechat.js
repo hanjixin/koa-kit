@@ -11,6 +11,7 @@ let router = require('koa-router')();
 let request = require('request');
 let weChat = require('../config').weChat;
 var User = require('../dataBase/schema/user');
+let getConfigData = require('./wechat/getConfigData')
 router.get('/getCode', async (ctx, next) => {
   !ctx.query.code &&
     (ctx.body = {
@@ -71,4 +72,12 @@ router.get('/getCode', async (ctx, next) => {
     ctx.body = err
   }
 });
+router.get('/getSigntrue', async (ctx, next) => {
+  try {
+    ctx.body = await getConfigData('www.baidu.com')
+
+  } catch(err) {
+    ctx.body = err
+  }
+})
 module.exports = router;
