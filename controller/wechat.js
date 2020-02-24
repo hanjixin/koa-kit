@@ -74,7 +74,7 @@ router.get('/getCode', async (ctx, next) => {
 });
 router.get('/getSigntrue', async (ctx, next) => {
   try {
-    ctx.body = await getConfigData('www.baidu.com')
+    ctx.body = await getConfigData('http://39.97.170.243:9009')
 
   } catch(err) {
     ctx.body = err

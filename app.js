@@ -10,7 +10,7 @@ const koaBody = require('koa-body');
 
 const koaJsonLogger = require('koa-json-logger');
 var cors = require('koa2-cors');
-require('./dataBase')
+// require('./dataBase')
 
 app.use(async (ctx, next) => {
   console.log(ctx.URL.pathname, ctx.state)

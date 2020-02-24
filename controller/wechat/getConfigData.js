@@ -65,9 +65,9 @@ async function getConfigData(href) {
   try {
     const accessTokenData = await getAccessToken();
     const ticketData = await getTicket(accessTokenData.access_token);
-    const decodeHref = Base64.decode(href);
-    console.log(href,decodeHref,ticketData.ticket)
-    configData = sign(ticketData.ticket, decodeHref);
+    // const decodeHref = Base64.decode(href);
+    // console.log(href,decodeHref,ticketData.ticket)
+    configData = sign(ticketData.ticket, href);
     configData.appid = base.appid;
   } catch (err) {
     //打印错误日志
