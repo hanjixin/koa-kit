@@ -80,4 +80,13 @@ router.get('/getSigntrue', async (ctx, next) => {
     ctx.body = err
   }
 })
+router.post('/getSigntrue', async (ctx, next) => {
+  // console.log(ctx.request.body.url)
+  try {
+    ctx.body = await getConfigData(ctx.request.body.url)
+
+  } catch(err) {
+    ctx.body = err
+  }
+})
 module.exports = router;
