@@ -20,7 +20,7 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "koa2-cors": "^2.0.6",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.4.20",
     "path-to-regexp": "^3.0.0",
     "request": "^2.88.0",
